@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button><ion-icon name="list" (click)="pop()"></ion-icon></button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+    <ion-slides class="jr">
+        <ion-slide>
+          <video src="../../assets/vids/(1) South African Gang Member- What It's Like To Be A Hitman - YouTube.MKV" height="400px" width="400px" controls></video>
+        </ion-slide>
+        <ion-slide>
+            <video src="../../assets/vids/(1) Asaba 2018 African Athletics Championship underway - YouTube.MKV" height="400px" width="400px" controls></video>
+        </ion-slide>
+        <ion-slide>
+            <video src="../../assets/vids/(1) Winston Ntshona dies - YouTube.MKV" height="400px" width="400px" controls></video>
+        </ion-slide>
+      </ion-slides>
+  <ion-list >
+    <h1>News</h1>
+    <ion-item *ngFor="let i of arr, let a = index" (click)="view(a)">
+      <ion-thumbnail item-start>
+        <img src="{{i.urlToImage}}">
+      </ion-thumbnail>
+      <h2>{{i.title}}</h2>
+      <p>{{i.description}}</p>-
+    </ion-item>
+  </ion-list>
+</ion-content>
